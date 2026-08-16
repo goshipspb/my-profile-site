@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>조승민 | AI 분야로 전환하는 개발자</title>
+  <meta name="description" content="공무원에서 AI 분야로 커리어를 전환 중인 조승민의 개인 프로필 사이트입니다." />
+  <link rel="icon" type="image/png" href="./assets/favicon_64.png" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // 파스텔 톤 파란색 팔레트를 Tailwind 커스텀 컬러로 등록하고,
+    // 다크모드를 클래스(class) 방식으로 제어하도록 설정
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pastel: {
+              50: '#f5faff',
+              100: '#e8f3fd',
+              200: '#cfe6fa',
+              300: '#a9d1f5',
+              400: '#7fb8ec',
+              500: '#5a9fdb',
+              600: '#4784bd',
+              700: '#396a97',
+              800: '#2c5273',
+              900: '#1f3a52'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-pastel-50 text-pastel-900 dark:bg-slate-900 dark:text-pastel-100 transition-colors duration-300">
+
+  <!-- 헤더 / 네비게이션 -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-pastel-50/80 dark:bg-slate-900/80 backdrop-blur border-b border-pastel-200 dark:border-slate-700">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="text-lg font-bold text-pastel-700 dark:text-pastel-200">조승민</a>
+
+      <!-- 데스크톱 네비게이션 -->
+      <nav aria-label="주 메뉴" class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#home" class="hover:text-pastel-500 transition-colors">소개</a>
+        <a href="#skills" class="hover:text-pastel-500 transition-colors">기술 스택</a>
+        <a href="#projects" class="hover:text-pastel-500 transition-colors">프로젝트</a>
+        <a href="#contact" class="hover:text-pastel-500 transition-colors">연락처</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <!-- 다크모드 토글 버튼 -->
+        <button id="theme-toggle" type="button" aria-label="다크모드 전환"
+          class="w-9 h-9 flex items-center justify-center rounded-full border border-pastel-200 dark:border-slate-700 hover:bg-pastel-100 dark:hover:bg-slate-800 transition-colors">
+          <span id="theme-toggle-icon" aria-hidden="true">🌙</span>
+        </button>
+
+        <!-- 모바일 햄버거 버튼 -->
+        <button id="menu-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobile-menu"
+          class="md:hidden w-9 h-9 flex items-center justify-center rounded-full border border-pastel-200 dark:border-slate-700 hover:bg-pastel-100 dark:hover:bg-slate-800 transition-colors">
+          <span id="menu-toggle-icon" aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 모바일 네비게이션 -->
+    <nav id="mobile-menu" aria-label="모바일 메뉴" class="hidden md:hidden px-6 pb-4 flex flex-col gap-3 text-sm font-medium">
+      <a href="#home" class="hover:text-pastel-500 transition-colors">소개</a>
+      <a href="#skills" class="hover:text-pastel-500 transition-colors">기술 스택</a>
+      <a href="#projects" class="hover:text-pastel-500 transition-colors">프로젝트</a>
+      <a href="#contact" class="hover:text-pastel-500 transition-colors">연락처</a>
+    </nav>
+  </header>
+
+  <main class="pt-24">
+
+    <!-- 히어로(소개) 섹션 -->
+    <section id="home" class="max-w-5xl mx-auto px-6 py-16 flex flex-col items-center text-center gap-6 fade-in-section">
+      <img src="./assets/profile_owl_320.png" alt="조승민 프로필 이미지" width="160" height="160"
+        class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-pastel-200 dark:border-pastel-700 shadow-lg shadow-pastel-200/50" />
+
+      <div>
+        <h1 class="text-3xl md:text-4xl font-bold text-pastel-700 dark:text-pastel-200">조승민</h1>
+        <p class="mt-2 text-lg text-pastel-600 dark:text-pastel-300">비전공 개발자 · AI 분야로 커리어 전환 중</p>
+      </div>
+
+      <p class="max-w-xl text-pastel-700/90 dark:text-pastel-200/90 leading-relaxed">
+        공무원을 그만두고 AI 분야로 직무를 옮기기 위해 준비하고 있습니다.<br />
+        클로드 코드를 통해 처음으로 개발을 배우며,<br />
+        이 과정을 이 사이트에 기록하고 있습니다.
+      </p>
+
+      <a href="#contact"
+        class="mt-2 px-6 py-3 rounded-full bg-pastel-600 hover:bg-pastel-700 text-white font-medium shadow-md shadow-pastel-300/50 transition-colors">
+        연락하기
+      </a>
+    </section>
+
+    <!-- 기술 스택 섹션 -->
+    <section id="skills" class="max-w-5xl mx-auto px-6 py-16 fade-in-section">
+      <h2 class="text-2xl font-bold text-center text-pastel-700 dark:text-pastel-200">기술 스택</h2>
+      <p class="mt-2 text-center text-sm text-pastel-600 dark:text-pastel-300">지금 배우고 사용하고 있는 도구들이에요</p>
+
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="flex flex-col items-center gap-2 p-6 rounded-2xl bg-pastel-100 dark:bg-slate-800 border border-pastel-200 dark:border-slate-700">
+          <span class="text-3xl">🤖</span>
+          <span class="font-medium">클로드 코드</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-6 rounded-2xl bg-pastel-100 dark:bg-slate-800 border border-pastel-200 dark:border-slate-700">
+          <span class="text-3xl">📄</span>
+          <span class="font-medium">HTML</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-6 rounded-2xl bg-pastel-100 dark:bg-slate-800 border border-pastel-200 dark:border-slate-700">
+          <span class="text-3xl">🎨</span>
+          <span class="font-medium">CSS</span>
+        </div>
+        <div class="flex flex-col items-center gap-2 p-6 rounded-2xl bg-pastel-100 dark:bg-slate-800 border border-pastel-200 dark:border-slate-700">
+          <span class="text-3xl">⚡</span>
+          <span class="font-medium">JavaScript</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 프로젝트 섹션 -->
+    <!-- 실제 프로젝트가 생기면 아래 카드 3개의 제목/설명/링크만 바꿔서 사용하면 됩니다 -->
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-16 fade-in-section">
+      <h2 class="text-2xl font-bold text-center text-pastel-700 dark:text-pastel-200">프로젝트</h2>
+      <p class="mt-2 text-center text-sm text-pastel-600 dark:text-pastel-300">진행했거나 진행 중인 프로젝트예요 (샘플)</p>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <article class="p-6 rounded-2xl bg-pastel-100 dark:bg-slate-800 border border-pastel-200 dark:border-slate-700 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg">나만의 프로필 사이트</h3>
+          <p class="text-sm text-pastel-700/80 dark:text-pastel-200/80">클로드 코드로 처음부터 직접 만든 첫 웹사이트입니다.</p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="text-xs px-2 py-1 rounded-full bg-pastel-200 dark:bg-slate-700">HTML</span>
+            <span class="text-xs px-2 py-1 rounded-full bg-pastel-200 dark:bg-slate-700">CSS</span>
+            <span class="text-xs px-2 py-1 rounded-full bg-pastel-200 dark:bg-slate-700">JavaScript</span>
+          </div>
+          <a href="#" class="text-sm font-medium text-pastel-600 dark:text-pastel-300 hover:underline">자세히 보기 →</a>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-pastel-100 dark:bg-slate-800 border border-pastel-200 dark:border-slate-700 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg">프로젝트 2 (예정)</h3>
+          <p class="text-sm text-pastel-700/80 dark:text-pastel-200/80">앞으로 진행할 학습 프로젝트를 이 자리에 채워 넣을 예정입니다.</p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="text-xs px-2 py-1 rounded-full bg-pastel-200 dark:bg-slate-700">예정</span>
+          </div>
+          <a href="#" class="text-sm font-medium text-pastel-600 dark:text-pastel-300 hover:underline">자세히 보기 →</a>
+        </article>
+
+        <article class="p-6 rounded-2xl bg-pastel-100 dark:bg-slate-800 border border-pastel-200 dark:border-slate-700 flex flex-col gap-3">
+          <h3 class="font-semibold text-lg">프로젝트 3 (예정)</h3>
+          <p class="text-sm text-pastel-700/80 dark:text-pastel-200/80">AI 분야 학습 과정에서 만든 결과물을 정리할 예정입니다.</p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="text-xs px-2 py-1 rounded-full bg-pastel-200 dark:bg-slate-700">예정</span>
+          </div>
+          <a href="#" class="text-sm font-medium text-pastel-600 dark:text-pastel-300 hover:underline">자세히 보기 →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- 연락처 섹션 -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 py-16 flex flex-col items-center text-center gap-4 fade-in-section">
+      <h2 class="text-2xl font-bold text-pastel-700 dark:text-pastel-200">연락처</h2>
+      <p class="text-pastel-600 dark:text-pastel-300">궁금한 점이 있다면 언제든 편하게 연락 주세요</p>
+      <a href="mailto:goshipspb@gmail.com"
+        class="mt-2 px-6 py-3 rounded-full bg-pastel-600 hover:bg-pastel-700 text-white font-medium shadow-md shadow-pastel-300/50 transition-colors">
+        ✉️ goshipspb@gmail.com
+      </a>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm text-pastel-600 dark:text-pastel-400 py-8 border-t border-pastel-200 dark:border-slate-700">
+    © 2026 조승민. All rights reserved.
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

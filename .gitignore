@@ -1,0 +1,13 @@
+# OS가 자동으로 만드는 파일
+.DS_Store
+Thumbs.db
+
+# 에디터/IDE 설정 파일
+.vscode/
+.idea/
+
+# Claude Code 로컬 전용 설정 (내 컴퓨터에서만 쓰는 개인 설정)
+.claude/settings.local.json
+
+# 로그 파일
+*.log

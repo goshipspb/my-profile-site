@@ -1,0 +1,18 @@
+/* Tailwind로 표현하기 애매한 커스텀 스타일만 여기에 작성합니다 */
+
+/* 부드러운 스크롤: 네비게이션 링크 클릭 시 매끄럽게 이동 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 섹션이 화면에 나타날 때 살짝 아래에서 위로 올라오며 페이드인되는 효과 */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
